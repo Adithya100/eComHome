@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <title>E-Com</title>
+      <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+         rel="stylesheet" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+      <link href="style.css" rel="stylesheet" />
+   </head>
+   <body class="black-custom">
+      <div class="flex antialiased green-custom bg-white">
+         
+         <div class="flex flex-col flex-1 overflow-x-hidden overflow-y-hidden">
+            <!-- header content start -->
+            <header class="w-full">
+               <div class="flex-1 flex flex-col">
+                  <nav class="px-4 flex justify-between bg-green-custom h-16 md:px-24 px-4">
+                     <ul class="flex items-center">
+                        <li class="h-6 w-6 text-white">
+                           <a class="block" href="#">
+                              <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="h-6 w-6 text-white">
+                           <a class="block" href="#">
+                              <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="h-6 w-6 text-white">
+                           <a class="block" href="#">
+                              <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="h-6 w-6 text-white">
+                           <a class="block" href="#">
+                              <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                              </svg>
+                           </a>
+                        </li>
+                     </ul>
+                     <ul class="flex items-center">
+                        <li class="flex text-white">
+                           <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                              <path fill="currentColor"
+                                 d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9H16.1C15.8 14.9 15.6 15 15.4 15.2L13.2 17.4C10.4 15.9 8 13.6 6.6 10.8L8.8 8.6C9.1 8.3 9.2 7.9 9 7.6C8.7 6.5 8.5 5.2 8.5 4C8.5 3.5 8 3 7.5 3H4C3.5 3 3 3.5 3 4C3 13.4 10.6 21 20 21C20.5 21 21 20.5 21 20V16.5C21 16 20.5 15.5 20 15.5M5 5H6.5C6.6 5.9 6.8 6.8 7 7.6L5.8 8.8C5.4 7.6 5.1 6.3 5 5M19 19C17.7 18.9 16.4 18.6 15.2 18.2L16.4 17C17.2 17.2 18.1 17.4 19 17.4V19M15 12H17A5 5 0 0 0 12 7V9A3 3 0 0 1 15 12M19 12H21C21 7 16.97 3 12 3V5C15.86 5 19 8.13 19 12Z" />
+                           </svg>
+                           +245 124586 414
+                        </li>
+                     </ul>
+                     <ul class="flex items-center">
+                        <li>
+                           <a class="text-sm font-semibold text-white" href="#">My Account</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <nav
+                  class="relative py-4 flex justify-end md:justify-between items-center bg-white md:px-24 px-4 border border-b border-gray-200 mb-8">
+                  <a class="text-3xl font-bold  mr-auto" href="#">
+                  <img src="media/logo.png" class="h-8" alt="logo" title="logo">
+                  </a>
+                  <div class="lg:hidden">
+                     <button class="navbar-burger flex items-center black-custom p-3">
+                        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <title>Mobile menu</title>
+                           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                     </button>
+                  </div>
+                  <ul
+                     class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                     <li><a class="text-sm black-custom font-bold hover:text-gray-500" href="#">Home</a></li>
+                     <li><a class="text-sm black-custom font-bold hover:text-gray-500" href="#">Products</a></li>
+                     <li><a class="text-sm black-custom font-bold hover:text-gray-500" href="#">Categories</a></li>
+                     <li><a class="text-sm black-custom font-bold hover:text-gray-500" href="#">Catalogs</a></li>
+                     <li><a class="text-sm black-custom font-bold hover:text-gray-500" href="#">About Us</a></li>
+                     <li><a class="text-sm black-custom font-bold hover:text-gray-500" href="#">Contact Us</a></li>
+                  </ul>
+                  <a class="lg:inline-block lg:ml-auto lg:mr-3 text-sm green-custom transition duration-200"
+                     href="#">
+                     <svg class="h-6 p-1 text-green-500 duration-200 black-custom" aria-hidden="true"
+                        focusable="false" data-prefix="far" data-icon="search" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="svg-inline--fa fa-search fa-w-16 fa-9x">
+                        <path fill="currentColor"
+                           d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z">
+                        </path>
+                     </svg>
+                  </a>
+                  <a class="lg:inline-block text-sm black-custom font-semibold transition duration-200" href="#">
+                  Enquiry
+                  </a>
+               </nav>
+               <div class="navbar-menu relative z-50 hidden">
+                  <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                  <nav
+                     class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                     <div class="flex items-center mb-8">
+                        <a class="mr-auto text-3xl font-bold " href="#">
+                        <img src="media/logo.png" class="h-8" alt="" title="logo">
+                        </a>
+                        <button class="navbar-close">
+                           <svg class="h-6 w-6 black-custom cursor-pointer hover:text-gray-500"
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                 d="M6 18L18 6M6 6l12 12"></path>
+                           </svg>
+                        </button>
+                     </div>
+                     <div>
+                        <ul>
+                           <li class="mb-1">
+                              <a class="block p-4 text-sm font-semibold black-custom hover:bg-blue-50 hover:black-custom rounded"
+                                 href="#">Home</a>
+                           </li>
+                           <li class="mb-1">
+                              <a class="block p-4 text-sm font-semibold black-custom hover:bg-blue-50 hover:black-custom rounded"
+                                 href="#">Products</a>
+                           </li>
+                           <li class="mb-1">
+                              <a class="block p-4 text-sm font-semibold black-custom hover:bg-blue-50 hover:black-custom rounded"
+                                 href="#">Categories</a>
+                           </li>
+                           <li class="mb-1">
+                              <a class="block p-4 text-sm font-semibold black-custom hover:bg-blue-50 hover:black-custom rounded"
+                                 href="#">Catalogs</a>
+                           </li>
+                           <li class="mb-1">
+                              <a class="block p-4 text-sm font-semibold black-custom hover:bg-blue-50 hover:black-custom rounded"
+                                 href="#">About Us</a>
+                           </li>
+                           <li class="mb-1">
+                              <a class="block p-4 text-sm font-semibold black-custom hover:bg-blue-50 hover:black-custom rounded"
+                                 href="#">Contact Us</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+            </header>
+            <!-- header content end -->
+            <!-- Main content start -->
+            <div class="mx-auto px-6 w-full mb-6 lg:px-20">
+               <div class="font-bold text-xl mb-2 uppercase text-center mb-4 black-custom">Featured Categories</div>
+               <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <a href="#" class="p-4 bg-gray-100">
+                     <img class="mx-auto" src="media/p1.png" alt="image" title="image">
+                     <div class="p-2 text-md inline-block w-full font-bold uppercase break-all black-custom">Category Name
+                     </div>
+                  </a>
+                  <a href="#" class="p-4 bg-gray-100">
+                     <img class="mx-auto" src="media/p2.png" alt="image" title="image">
+                     <div class="p-2 text-md inline-block w-full font-bold uppercase break-all black-custom">Category Name
+                     </div>
+                  </a>
+                  <a href="#" class="p-4 bg-gray-100">
+                     <img class="mx-auto" src="media/p3.png" alt="image" title="image">
+                     <div class="p-2 text-md inline-block w-full font-bold uppercase break-all black-custom">Category Name
+                     </div>
+                  </a>
+                  <a href="#" class="p-4 bg-gray-100">
+                     <img class="mx-auto" src="media/p5.png" alt="image" title="image">
+                     <div class="p-2 text-md inline-block w-full font-bold uppercase break-all black-custom">Category Name
+                     </div>
+                  </a>
+                  <a href="#" class="p-4 bg-gray-100">
+                     <img class="mx-auto" src="media/p6.png" alt="image" title="image">
+                     <div class="p-2 text-md inline-block w-full font-bold uppercase break-all black-custom">Category Name
+                     </div>
+                  </a>
+                  <a href="#" class="p-4 bg-gray-100">
+                     <img class="mx-auto" src="media/p7.png" alt="image" title="image">
+                     <div class="p-2 text-md inline-block w-full font-bold uppercase break-all black-custom">Category Name
+                     </div>
+                  </a>
+                  <a href="#" class="p-4 bg-gray-100">
+                     <img class="mx-auto" src="media/p8.png" alt="image" title="image">
+                     <div class="p-2 text-md inline-block w-full font-bold uppercase break-all black-custom">Category Name
+                     </div>
+                  </a>
+                  <a href="#" class="p-4 bg-gray-100">
+                     <img class="mx-auto" src="media/p9.png" alt="image" title="image">
+                     <div class="p-2 text-md inline-block w-full font-bold uppercase break-all black-custom">Category Name
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="mx-auto px-6 w-full mb-6 lg:px-20">
+               <div class="font-bold text-xl mb-2 text-center mb-4 black-custom">Treanding at Labnix
+               </div>
+               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div class="bg-white overflow-hidden border border-gray-200 rounded md:flex md:flex-col justify-between">
+                     <div class="md:flex md:flex-row mt-4 mb-2">
+                        <div class="lg:w-1/3">
+                           <img class="mx-auto" src="media/p1.png" alt="image" title="image">
+                        </div>
+                        <div class="lg:w-2/3 p-4">
+                           <div class="text-lg font-semibold">Product Name</div>
+                           <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit
+                              </p>
+                        </div>
+                     </div>
+                     <div class="flex flex-row bg-green-custom rounded-b">
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">View</button>
+                        <button class="w-1/3 text-center text-white p-2 border-r border-l border-white hover:bg-blue-700" type="button">Quote</button>
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                     </div>
+                  </div>
+                  <div class="bg-white overflow-hidden border border-gray-200 rounded md:flex md:flex-col justify-between">
+                     <div class="md:flex md:flex-row mt-4 mb-2">
+                        <div class="lg:w-1/3">
+                           <img class="mx-auto" src="media/p2.png" alt="image" title="image">
+                        </div>
+                        <div class="lg:w-2/3 p-4">
+                           <div class="text-lg font-semibold">Product Name</div>
+                           <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit
+                              </p>
+                        </div>
+                     </div>
+                     <div class="flex flex-row bg-green-custom rounded-b">
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">View</button>
+                        <button class="w-1/3 text-center text-white p-2 border-r border-l border-white hover:bg-blue-700" type="button">Quote</button>
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                     </div>
+                  </div>
+                  <div class="bg-white overflow-hidden border border-gray-200 rounded md:flex md:flex-col justify-between">
+                     <div class="md:flex md:flex-row mt-4 mb-2">
+                        <div class="lg:w-1/3">
+                           <img class="mx-auto" src="media/p3.png" alt="image" title="image">
+                        </div>
+                        <div class="lg:w-2/3 p-4">
+                           <div class="text-lg font-semibold">Product Name</div>
+                           <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit
+                              </p>
+                        </div>
+                     </div>
+                     <div class="flex flex-row bg-green-custom rounded-b">
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">View</button>
+                        <button class="w-1/3 text-center text-white p-2 border-r border-l border-white hover:bg-blue-700" type="button">Quote</button>
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                     </div>
+                  </div>
+                  <div class="bg-white overflow-hidden border border-gray-200 rounded md:flex md:flex-col justify-between">
+                     <div class="md:flex md:flex-row mt-4 mb-2">
+                        <div class="lg:w-1/3">
+                           <img class="mx-auto" src="media/p5.png" alt="image" title="image">
+                        </div>
+                        <div class="lg:w-2/3 p-4">
+                           <div class="text-lg font-semibold">Product Name</div>
+                           <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit
+                              </p>
+                        </div>
+                     </div>
+                     <div class="flex flex-row bg-green-custom rounded-b">
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">View</button>
+                        <button class="w-1/3 text-center text-white p-2 border-r border-l border-white hover:bg-blue-700" type="button">Quote</button>
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                     </div>
+                  </div>
+                  <div class="bg-white overflow-hidden border border-gray-200 rounded md:flex md:flex-col justify-between">
+                     <div class="md:flex md:flex-row mt-4 mb-2">
+                        <div class="lg:w-1/3">
+                           <img class="mx-auto" src="media/p6.png" alt="image" title="image">
+                        </div>
+                        <div class="lg:w-2/3 p-4">
+                           <div class="text-lg font-semibold">Product Name</div>
+                           <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit
+                              </p>
+                        </div>
+                     </div>
+                     <div class="flex flex-row bg-green-custom rounded-b">
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">View</button>
+                        <button class="w-1/3 text-center text-white p-2 border-r border-l border-white hover:bg-blue-700" type="button">Quote</button>
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                     </div>
+                  </div>
+                  <div class="bg-white overflow-hidden border border-gray-200 rounded md:flex md:flex-col justify-between">
+                     <div class="md:flex md:flex-row mt-4 mb-2">
+                        <div class="lg:w-1/3">
+                           <img class="mx-auto" src="media/p7.png" alt="image" title="image">
+                        </div>
+                        <div class="lg:w-2/3 p-4">
+                           <div class="text-lg font-semibold">Product Name</div>
+                           <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit
+                              </p>
+                        </div>
+                     </div>
+                     <div class="flex flex-row bg-green-custom rounded-b">
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">View</button>
+                        <button class="w-1/3 text-center text-white p-2 border-r border-l border-white hover:bg-blue-700" type="button">Quote</button>
+                        <button class="w-1/3 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="mx-auto px-6 w-full mb-6 lg:px-20">
+               <div class="font-bold text-xl mb-2 text-center mb-4 black-custom">Suggested Products
+               </div>
+               <div class="grid lg:grid-cols-6 md:grid-cols-3 gap-4 mb-4">
+                  <div class="lg:col-span-3 md:col-span-3 col-span-1 border text-sm text-grey-dark flex items-center justify-center rounded">
+                     <div class="lg:flex bg-white overflow-hidden m-2">
+                        <div class="lg:w-1/3 flex items-center justify-center">
+                           <img class="mx-auto" src="media/p7.png" alt="image" title="image">
+                        </div>
+                        <div class="lg:w-2/3 p-4">
+                           <div class="green-custom text-lg font-semibold mb-2">Lorem ipsum dolor</div>
+                           <div class="black-custom text-md font-semibold">Lorem ipsum dolor</div>
+                           <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit
+                              In odit exercitationem fuga id nam quia. Lorem ipsum dolor sit amet consectetur adipisicing elit
+                              In odit exercitationem fuga id nam quia.
+                           </p>
+                           <button class="bg-green-custom hover:bg-blue-700 text-white mt-4 py-2 px-6 rounded">
+                           View
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-1 md:col-span-1 border text-sm text-grey-dark flex items-center justify-end flex-col rounded">
+                     <div class="w-full">
+                        <img class="mx-auto" src="media/p7.png" alt="image" title="image">
+                     </div>
+                     <div class="w-full">
+                        <div class="w-full p-4">
+                           <div class="text-lg font-semibold text-center">Product Name</div>
+                        </div>
+                        <div class="flex flex-row bg-green-custom rounded-b">
+                           <button class="w-1/2 text-center text-white p-2 hover:bg-blue-700 border-r border-white" type="button">View</button>
+                           <button class="w-1/2 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-1 md:col-span-1 border text-sm text-grey-dark flex items-center justify-end flex-col rounded">
+                     <div class="w-full">
+                        <img class="mx-auto" src="media/p7.png" alt="image" title="image">
+                     </div>
+                     <div class="w-full">
+                        <div class="w-full p-4">
+                           <div class="text-lg font-semibold text-center">Product Name</div>
+                        </div>
+                        <div class="flex flex-row bg-green-custom rounded-b">
+                           <button class="w-1/2 text-center text-white p-2 hover:bg-blue-700 border-r border-white" type="button">View</button>
+                           <button class="w-1/2 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-1 md:col-span-1 border text-sm text-grey-dark flex items-center justify-end flex-col rounded">
+                     <div class="w-full">
+                        <img class="mx-auto" src="media/p7.png" alt="image" title="image">
+                     </div>
+                     <div class="w-full">
+                        <div class="w-full p-4">
+                           <div class="text-lg font-semibold text-center">Product Name</div>
+                        </div>
+                        <div class="flex flex-row bg-green-custom rounded-b">
+                           <button class="w-1/2 text-center text-white p-2 hover:bg-blue-700 border-r border-white" type="button">View</button>
+                           <button class="w-1/2 text-center text-white p-2 hover:bg-blue-700" type="button">Catalog</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Main content end -->
+         </div>
+      </div>
+      <!-- Footer content start -->
+      <div class="bg-black-custom">
+         <div class="container mx-auto px-6">
+            <div class="m-2 py-6 text-white flex flex-wrap justify-between">
+               <div class="p-5 w-auto">
+                  <a class="text-3xl font-bold  mr-auto" href="#">
+                  <img src="media/logo.png" class="h-8" alt="logo" title="logo">
+                  </a>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title </a>
+                  <ul class="flex items-center">
+                     <li class="h-6 w-6 text-white">
+                        <a class="my-3 block" href="#">
+                           <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                              <path fill="currentColor"
+                                 d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="h-6 w-6 text-white">
+                        <a class="my-3 block" href="#">
+                           <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                              <path fill="currentColor"
+                                 d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="h-6 w-6 text-white">
+                        <a class="my-3 block" href="#">
+                           <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                              <path fill="currentColor"
+                                 d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="h-6 w-6 text-white">
+                        <a class="my-3 block" href="#">
+                           <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                              <path fill="currentColor"
+                                 d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                           </svg>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="p-5 w-auto">
+                  <div class="capitalize font-medium text-white text-lg mb-4">Latest News</div>
+                  <a class="text-3xl font-bold  mr-auto" href="#">
+                  <img src="media/logo.png" class="h-8" alt="logo" title="logo">
+                  </a>
+                  <p class="mb-6">Sample text</p>
+                  <a class="text-3xl font-bold  mr-auto" href="#">
+                  <img src="media/logo.png" class="h-8" alt="logo" title="logo">
+                  </a>
+                  <p class="mb-4">Sample text</p>
+               </div>
+               <div class="p-5 w-auto">
+                  <div class="capitalize font-medium text-white text-lg">About Us</div>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title </a>
+               </div>
+               <div class="p-5 w-auto">
+                  <div class="capitalize font-medium text-white text-lg">Best Seller</div>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title</a>
+                  <a class="my-3 block" href="#">Sample Title </a>
+               </div>
+            </div>
+            <div class="pt-2 container mx-auto px-6 border-t">
+               <div class="mt-2 text-center text-white pb-4">© Copyright 2022. All Rights Reserved.</div>
+            </div>
+         </div>
+      </div>
+      <!-- Footer content end -->
+   </body>
+   <script>
+      // Burger menus
+      document.addEventListener('DOMContentLoaded', function () {
+         // open
+         const burger = document.querySelectorAll('.navbar-burger');
+         const menu = document.querySelectorAll('.navbar-menu');
+      
+         if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+               burger[i].addEventListener('click', function () {
+                  for (var j = 0; j < menu.length; j++) {
+                     menu[j].classList.toggle('hidden');
+                  }
+               });
+            }
+         }
+      
+         // close
+         const close = document.querySelectorAll('.navbar-close');
+         const backdrop = document.querySelectorAll('.navbar-backdrop');
+      
+         if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+               close[i].addEventListener('click', function () {
+                  for (var j = 0; j < menu.length; j++) {
+                     menu[j].classList.toggle('hidden');
+                  }
+               });
+            }
+         }
+      
+         if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+               backdrop[i].addEventListener('click', function () {
+                  for (var j = 0; j < menu.length; j++) {
+                     menu[j].classList.toggle('hidden');
+                  }
+               });
+            }
+         }
+      });
+   </script>
+</html>
